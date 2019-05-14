@@ -45,11 +45,24 @@ The output should now look like:
 
 In order to make the data editable, we need to change the `text` binding to a `value` binding.
 
+We will also change the `strong` elements into HTML `input elements` *with no closing tags*.
+
 ```html
-<p>First name: <strong data-bind="value: firstName">todo</strong></p>
-<p>Last name: <strong data-bind="value: lastName">todo</strong></p>
+<p>First name: <input data-bind="value: firstName" /></p>
+<p>Last name: <input data-bind="value: lastName" /></p>
 ```
 
 Now we need to introduce **observables**.
 
 An **observable** is a property that automatically will issue notifications whenever their value changes.
+
+Update your viewmodel to make the `firstName` and `lastName` properties **observable** using `ko.observable`:
+
+```JavaScript
+function AppViewModel() {
+    this.firstName = ko.observable("Nicky");
+    this.lastName = ko.observable("Zebra");
+}
+```
+
+There should now be editable text boxes with the names inside.
