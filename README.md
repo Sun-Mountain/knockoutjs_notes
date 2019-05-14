@@ -85,3 +85,41 @@ function AppViewModel() {
     }, this);
 }
 ```
+
+In order to display `fullName` in the document, we need to add the following to the HTML file:
+
+```HTML
+<p>Full name: <strong data-bind="text: fullName"></strong>
+```
+
+You should now see something like:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First name: **Nicky**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name: **Zebra**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full name: **Nicky Zebra**
+
+And when you change the name in the text boxes, the `fullName` should change to mirror your inputs.
+
+
+## 4. Add More Behavior
+
+Let's add a button to capitalize the last name!
+
+```JavaScript
+    // Leave firstName, lastName, and fullName
+
+    this.capitalizeLastName = function() {
+        var currentVal = this.lastName(); // Reads lastName
+        this.lastName(currentVal.toUpperCase()); // Rewrites lastName
+    };
+```
+
+Next add a button that calls the function.
+
+```HTML
+<button data-bind="click: capitalizeLastName">Go caps!</button>
+```
+
+When you click on the button, your `lastName` value should be all uppercase!
