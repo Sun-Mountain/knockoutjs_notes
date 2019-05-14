@@ -1,5 +1,7 @@
 # KnockoutJS Notes
 
+## 1. Using Bindings in View
+
 ```html
 <!-- This is a *view* - HTML markup that defines the appearance of your UI -->
 
@@ -10,8 +12,8 @@
 ```JavaScript
 // This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
 function AppViewModel() {
-    this.firstName = "Bert";
-    this.lastName = "Bertington";
+    this.firstName = "Nicky";
+    this.lastName = "Zebra";
 }
 
 // Activates knockout.js
@@ -21,5 +23,19 @@ ko.applyBindings(new AppViewModel());
 Right now, the output will look something like:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First name: **todo**
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name: **todo**
 
+
+In order for the HTML to recognize the viewmodel in the JavaScript file, add `data-bind` attributes to the `strong` elements.
+
+```html
+<p>First name: <strong data-bind="text: firstName">todo</strong></p>
+<p>Last name: <strong data-bind="text: lastName">todo</strong></p>
+```
+
+The output should now look like:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First name: **Nicky**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name: **Zebra**
