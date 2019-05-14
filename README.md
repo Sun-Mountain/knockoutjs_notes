@@ -66,3 +66,8 @@ function AppViewModel() {
 ```
 
 There should now be editable text boxes with the names inside.
+
+
+## 3. Defining Computed Values
+
+In order to combine or convert multiple observables, Knockout uses **computed properties**. A **computed property** is *observable* (they note change) and they are *computed* based on the values of other observables.
