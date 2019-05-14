@@ -49,3 +49,7 @@ In order to make the data editable, we need to change the `text` binding to a `v
 <p>First name: <strong data-bind="value: firstName">todo</strong></p>
 <p>Last name: <strong data-bind="value: lastName">todo</strong></p>
 ```
+
+Now we need to introduce **observables**.
+
+An **observable** is a property that automatically will issue notifications whenever their value changes.
