@@ -72,7 +72,7 @@ There should now be editable text boxes with the names inside.
 
 In order to combine or convert multiple observables, Knockout uses **computed properties**. A **computed property** is *observable* (they note change) and they are *computed* based on the values of other observables.
 
-Let's add a `fullName` property to the view model by adding the following code inside the `AppViewModel`.
+Let's add a `fullName` property to the view model by adding the following code inside the `AppViewModel` after `firstName` and `lastName` are declared.
 
 ```JavaScript
 function AppViewModel() {
