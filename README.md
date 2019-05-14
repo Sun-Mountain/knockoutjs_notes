@@ -39,3 +39,13 @@ The output should now look like:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First name: **Nicky**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name: **Zebra**
+
+
+## 2. Make the data editable
+
+In order to make the data editable, we need to change the `text` binding to a `value` binding.
+
+```html
+<p>First name: <strong data-bind="value: firstName">todo</strong></p>
+<p>Last name: <strong data-bind="value: lastName">todo</strong></p>
+```
