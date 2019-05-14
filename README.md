@@ -20,6 +20,6 @@ ko.applyBindings(new AppViewModel());
 
 Right now, the output will look something like:
 
-> First name: **todo**
-> Last name: **todo**
+    First name: **todo**
+    Last name: **todo**
 
