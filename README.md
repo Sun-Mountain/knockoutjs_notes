@@ -1,4 +1,4 @@
-# KnockoutJS Notes
+# KnockoutJS Introduction
 
 ## 1. Using Bindings in View
 
